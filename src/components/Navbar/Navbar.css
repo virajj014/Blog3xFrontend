@@ -1,0 +1,46 @@
+/* styles/Navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+  }
+  .navbar .icon{
+    font-size: 30px;
+  }
+  .navbar-left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .navbar-middle img {
+    height: 30px;
+    object-fit: contain;
+  }
+  
+  .navbar-right a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+  }
+
+  .navbar-right a:hover{
+     color: var(--col1);
+  }
+  
+  .navbar .icon:hover{
+    fill: var(--col1);
+ }
+  /* Add more styles as needed */
+  
