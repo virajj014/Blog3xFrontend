@@ -1,8 +1,117 @@
-:root{
-  --col1 : #FFDE59;
+:root {
+  --col1: #FFDE59;
+  --col2: #ffde592b;
+  --col3: #333
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
+}
+
+.head1 {
+  font-size: 30px;
+  font-weight: 500;
+  font-family: sans-serif;
+  color: var(--col1);
+}
+
+.forminput_cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0px;
+  gap: 10px;
+  width: 100%;
+}
+
+
+.forminput_cont input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border: 1px solid var(--col1);
+}
+
+.forminput_cont input:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px 0px var(--col1);
+}
+
+
+
+
+.forminput_cont textarea {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border: 1px solid var(--col1);
+  min-height: 300px;
+}
+
+.forminput_cont textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px 0px var(--col1);
+}
+
+.forminput_cont label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  /* margin-left: 2rem; */
+  margin-top: 0.7rem;
+  display: block;
+  color: var(--col1);
+  width: 100%;
+  margin-left: 40px;
+}
+
+
+.paragraph {
+  margin: 30px 20px;
+  box-shadow: 0px 0px 10px 0px var(--col1);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col2);
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.main_button {
+  background-color: white;
+  /* Green */
+
+  color: var(--col1);
+  font-weight: 600;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid var(--col1);
+  width: fit-content;
+  align-self: center;
+  margin: 10px;
+}
+
+.main_button:hover {
+  border: 1px solid var(--col1);
+  background-color: var(--col1);
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
 }

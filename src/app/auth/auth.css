@@ -1,0 +1,42 @@
+.authout{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--col2);
+    min-height: 100vh;
+    justify-content: center;
+}
+
+
+.authin{
+    display: flex;
+    width: 70%;
+    background-color: white;
+    align-self: center;
+    margin-top: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.authin .left{
+    width: 40%;
+    background-color: rgb(208, 208, 208);
+}
+
+
+.authin .right{
+    width: 60%;
+    padding: 10px;
+}
+
+
+.authlink{
+    align-self: center;
+    margin: 10px 0px;
+    color: var(--col3);
+}
+
+.authlink a{
+    color: var(--col1);
+    font-size: 20px;
+    font-weight: 500;
+}
