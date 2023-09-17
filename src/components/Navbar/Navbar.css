@@ -49,4 +49,23 @@
   fill: var(--col1);
 }
 
-/* Add more styles as needed */
+
+.navbar-right button{
+  background-color: black;
+  padding: 5px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: 500;
+  color: white;
+ }
+ .navbar-right button:hover{
+  background-color: white;
+  padding: 5px 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+ }
+  /* Add more styles as needed */
+  

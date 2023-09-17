@@ -5,4 +5,69 @@
     align-items: center;
     padding-top: 20px;
     /* background-color: var(--col2); */
-}
+  }
+  
+  
+  
+  
+  /* CSS for the blog paragraph container */
+  .blogtempparagraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Adjust the gap between paragraphs */
+    margin-top: 20px;
+    /* Add some spacing from the previous content */
+  }
+  
+  /* CSS for each paragraph */
+  .blogtempparagraphs>div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* CSS for paragraph title */
+  .blogtempparagraphs h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--col1);
+  }
+  
+  /* CSS for paragraph description */
+  .blogtempparagraphs p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333
+  }
+  
+  /* CSS for paragraph image */
+  .blogtempparagraphs img {
+    max-width: 40%;
+    /* Ensure the image fits within the container */
+    height: auto;
+    border-radius: 5px;
+    height: 200px;
+  }
+  
+  
+  
+  .blogtempparagraphs .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    color: #ff0000;
+  }
+  
+  
+  
+  
+  
+  

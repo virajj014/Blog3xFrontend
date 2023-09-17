@@ -1,0 +1,59 @@
+.blogcard {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid var(--col1);
+    box-shadow: 10px 10px 0 0px var(--col1light);
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.blogcard .blogimg {
+    object-fit: contain;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.blogcard p {
+    background: var(--col1);
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    white-space: nowrap;
+    /* Limit text to one line */
+    overflow: hidden;
+    /* Hide overflow content */
+    text-overflow: ellipsis;
+    /* Add an ellipsis (...) for truncated text */
+}
+
+
+.blogcard p:hover {
+    background: transparent;
+    transition: all 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+    cursor: pointer;
+    height: 30%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), var(--col1));
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    /* color: white; */
+
+
+
+    white-space: initial;
+    overflow: initial;
+    text-overflow:initial;
+}

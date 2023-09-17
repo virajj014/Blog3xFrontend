@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -8,45 +8,50 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
 import CategoryCard from './CategoryCard';
+
+type Category = {
+  name: string;
+  path: string;
+  bgcolor: string;
+};
+
+
 const CategoriesSlider = () => {
 
-  const categories = [
-    {
-      name: "Category 1",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 2",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 3",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 4",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 5",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 6",
-      path: "#",
-      bgcolor: generate(),
-    },
-    {
-      name: "Category 7",
-      path: "#",
-      bgcolor: generate(),
-    },
-  ];
+  const [categories, setCategories] = useState<Category[]>([])
+
+  const getCategories = () => {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/blogcategories`)
+      .then((res) => {
+        return res.json()
+      })
+      .then(async (response) => {
+        // console.log(response.categories)
+        // let catobj = {
+        //   name: string;
+        //   path: string;
+        //   bgcolor: string;
+        // }
+
+
+        const tempcat = await Promise.all(
+          response.categories.map(async (category:string) => ({
+            name: category,
+            path: category,
+            bgcolor: 'black'
+            // bgcolor: await generate(),
+          }))
+        );
+        // console.log(tempcat)
+        setCategories(tempcat)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+  useEffect(() => {
+    getCategories()
+  }, [])
 
   function createHex() {
     var hexCode1 = "";
@@ -67,12 +72,8 @@ const CategoriesSlider = () => {
     return gradient;
   }
   return (
-    <div>
-      <h1 style={{
-        fontSize: "20px",
-        fontWeight: "400",
-        margin: "10px 5px"
-      }}>Categories</h1>
+    <div className='sliderout'>
+      <h1>Categories</h1>
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
